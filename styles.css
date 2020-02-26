@@ -77,7 +77,7 @@ body {
 /* Fun toggler */
 
 .fun-toggler {
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     left: 10px;
     display: block;
