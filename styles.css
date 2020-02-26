@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');
 
+@import "animations.css";
+@import "media.css";
+
 * {
     box-sizing: border-box;
 }
@@ -9,9 +12,21 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    background: #1f1f1f;
+    background: #1b1b1b;
     font-family: 'Roboto Condensed', sans-serif;
 }
+
+.content {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #1b1b1b;
+    animation: 10s background-life infinite 0s;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Work in progress */
 
 .work-in-progress {
     position: absolute;
@@ -34,7 +49,7 @@ body {
     padding: 5px;
     color: #f5f5f5;
     border: 4px solid #ff8800;
-    animation: 4s infinite 0s spinner;
+    animation: 5s infinite 0s spinner, 10s spinner-life infinite 0s;
     background: #1f1f1f;
 }
 
@@ -45,6 +60,7 @@ body {
     font-size: 42px;
     line-height: 36px;
     color: #f5f5f5;
+    animation: 10s text-life infinite 0s;
 }
 
 .work-in-progress__title:after {
@@ -55,13 +71,49 @@ body {
     width: 45px;
     height: 4px;
     background: #ff8800;
+    animation: 10s dash-life infinite 0s;
 }
 
-@keyframes spinner {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Fun toggler */
+
+.fun-toggler {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0.1;
+    background: url('./favicon/apple-icon.png') no-repeat center center;
+    background-size: contain;
+    transition: opacity 0.1s ease-in-out 0s;
+    z-index: 2;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.fun-toggler:checked {
+    opacity: 1;
+    animation: 1s spinner;
+}
+
+.fun-toggler:checked + .content {
+    animation: 1s background-life-fun infinite 0s;
+}
+
+.fun-toggler:checked + .content .work-in-progress {
+    transform: translate(-50%, -50%) scaleX(-1);
+    filter: blur(3px);
+}
+
+
+
+.fun-toggler:checked + .content .work-in-progress__title:after {
+
+}
+
+.fun-toggler:checked + .content .work-in-progress__spinner {
+
 }

@@ -1,0 +1,133 @@
+/* Base */
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Default life */
+
+@keyframes background-life {
+    0% {
+        background: #f5f5f5;
+    }
+
+    50% {
+        background: #1b1b1b;
+    }
+
+    100% {
+        background: #f5f5f5;
+    }
+}
+
+@keyframes text-life {
+    0% {
+        color: #1b1b1b;
+    }
+
+    50% {
+        color: #f5f5f5;
+    }
+
+    100% {
+        color: #1b1b1b;
+    }
+}
+
+@keyframes dash-life {
+    0% {
+        background: #0077e2;
+    }
+
+    50% {
+        background: #ff8800;
+    }
+
+    100% {
+        background: #0077e2;
+    }
+}
+
+@keyframes spinner-life {
+    0% {
+        border-color: #0077e2;
+    }
+
+    50% {
+        border-color: #ff8800;
+    }
+
+    100% {
+        border-color: #0077e2;
+    }
+}
+
+/* Fun life */
+
+@keyframes background-life-fun {
+    0% {
+        background: #FFCE75;
+    }
+
+    25% {
+        background: #67C68C;
+    }
+
+    50% {
+        background: #625796;
+    }
+
+    75% {
+        background: #8E165E;
+    }
+
+    100% {
+        background: #7A122E;
+    }
+}
+
+@keyframes dash-life-fun {
+    0% {
+        width: 20px;
+    }
+
+    50% {
+        width: 100px;
+    }
+
+    100% {
+        width: 20px;
+    }
+}
+
+@keyframes spinner-fun {
+    0% {
+        transform: scaleX(2);
+        border-top-color: transparent;
+    }
+
+    30% {
+        border-right-color: transparent;
+    }
+
+    50% {
+        transform: scaleY(2);
+    }
+
+    60% {
+        border-bottom-color: transparent;
+    }
+
+    90% {
+        border-left-color: transparent;
+    }
+
+    100% {
+        transform: scaleX(2);
+    }
+}
