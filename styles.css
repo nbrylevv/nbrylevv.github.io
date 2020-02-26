@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');
 
-@import "animations.css";
-@import "media.css";
+@import "./animations.css";
+@import "./media.css";
 
 * {
     box-sizing: border-box;
