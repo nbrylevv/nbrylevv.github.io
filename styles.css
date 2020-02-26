@@ -84,7 +84,7 @@ body {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    opacity: 0.1;
+    opacity: 0.2;
     background: url('./favicon/apple-icon.png') no-repeat center center;
     background-size: contain;
     transition: opacity 0.1s ease-in-out 0s;
@@ -92,6 +92,14 @@ body {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
+}
+
+.fun-toggler:hover {
+    opacity: 1;
+}
+
+.fun-toggler:not(:checked):hover {
+    animation: 1s chair infinite 0s;
 }
 
 .fun-toggler:checked {
