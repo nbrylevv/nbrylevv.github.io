@@ -134,8 +134,15 @@ body {
   left: 10px;
   right: 10px;
   z-index: 3;
+}
+
+.projects__section {
   padding: 10px;
   background: #fff;
+}
+
+.projects__section:not(:last-of-type) {
+  margin-bottom: 10px;
 }
 
 .projects__label {

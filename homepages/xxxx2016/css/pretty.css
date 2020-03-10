@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,cyrillic);
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+	width: 100%;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+.bold {
+	font-weight: 600;
+}
+
+.content_wrapper {
+	font-family: 'Lora', serif;
+	position: relative;
+  width: 100%;
+  min-height: 50%;
+  background: #121212;
+  overflow: hidden;
+  padding: 30px 50px;
+  box-sizing: border-box;
+}
+.content_header {
+	position: relative;
+	z-index: 2;
+	color: #fff;
+  margin: 20px 0 30px;
+  font-size: 72px;
+	text-shadow: 2px 2px 0px rgba(0,0,0,0.8);
+	text-align: center;
+}
+.content__text {
+	position: relative;
+	z-index: 2;
+	color: #fff;
+  font-size: 20px;
+  width: 60%;
+  line-height: 1.2;
+}
+
+.content_wrapper.header {
+	padding: 0;
+}
+.header__name_wraper {
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -86px;
+  margin-left: -188px;
+  z-index: 2;
+}
+.header__name {
+  position: relative;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  text-transform: uppercase;
+  display: block;
+  font-size: 9em;
+  color: #fafafa;
+  top: 0;
+  text-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+  transition: top 0.4s ease-out 0s, color 0.4s linear 0s;
+  -webkit-transition: top 0.4s ease-out 0s, color 0.4s linear 0s;
+  -moz-transition: top 0.4s ease-out 0s, color 0.4s linear 0s;
+  -o-transition: top 0.4s ease-out 0s, color 0.4s linear 0s;
+  -ms-transition: top 0.4s ease-out 0s, color 0.4s linear 0s;
+}
+.header__name:hover {
+	color: #dfdfdf;
+	top: 20px;
+}
+.header__background {
+  position: fixed;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+	background: url('../images/intro.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background_overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0.2);
+}
+
+/* Header */
+.content_wrapper.header {
+	height: 100%;
+}
