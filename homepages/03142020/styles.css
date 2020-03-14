@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');
 
-@import "./animations.css";
-@import "./media.css";
+@import "animations.css";
+@import "media.css";
 
 * {
   box-sizing: border-box;
@@ -85,7 +85,7 @@ body {
   height: 40px;
   cursor: pointer;
   opacity: 0.2;
-  background: url('./favicon/apple-icon.png') no-repeat center center;
+  background: url('../../favicon/apple-icon.png') no-repeat center center;
   background-size: contain;
   transition: opacity 0.1s ease-in-out 0s;
   z-index: 2;
@@ -124,32 +124,4 @@ body {
 
 .fun-toggler:checked + .content .work-in-progress__spinner {
 
-}
-
-/* Projects */
-
-.projects {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  z-index: 3;
-}
-
-.projects__section {
-  padding: 10px;
-  background: #fff;
-}
-
-.projects__section:not(:last-of-type) {
-  margin-bottom: 10px;
-}
-
-.projects__label {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.project {
 }
