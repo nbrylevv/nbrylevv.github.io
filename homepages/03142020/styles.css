@@ -85,7 +85,7 @@ body {
   height: 40px;
   cursor: pointer;
   opacity: 0.2;
-  background: url('../../favicon/apple-icon.png') no-repeat center center;
+  background: url('../../public/favicon/apple-icon.png') no-repeat center center;
   background-size: contain;
   transition: opacity 0.1s ease-in-out 0s;
   z-index: 2;
