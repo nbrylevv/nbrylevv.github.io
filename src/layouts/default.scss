@@ -1,0 +1,9 @@
+@import '../assets/scss/mixins.scss';
+
+.layout {
+  padding: 20px;
+
+  @include desktop {
+    margin-left: 270px;
+  }
+}

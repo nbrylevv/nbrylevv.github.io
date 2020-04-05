@@ -1,13 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import Sidebar from './components/Sidebar/index';
+import './App.scss';
+import LayoutDefault from './layouts/Default';
+import ProjectCard from './components/ProjectCard';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Sidebar />
-
+      <LayoutDefault>
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </LayoutDefault>
     </div>
   );
 }

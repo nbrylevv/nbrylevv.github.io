@@ -1,0 +1,29 @@
+.navigation {
+  &__list {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link {
+    display: inline-flex;
+    padding: 10px 0;
+    color: #2d2d2d;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+      color: #1d1d1d;
+    }
+
+    &:active {
+      color: #101010;
+    }
+  }
+}
