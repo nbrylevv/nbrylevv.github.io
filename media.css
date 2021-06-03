@@ -1,6 +1,83 @@
-@media screen and (max-width: 414px) {
-    .fun-toggler {
-        width: 60px;
-        height: 60px;
-    }
+@media screen and (max-width: 1480px) {
+  .pet-projects__list {
+    grid-template-columns: 300px 300px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .greetings {
+    flex: 0 0 430px;
+  }
+}
+
+
+@media screen and (max-width: 1090px) {
+  .pet-projects__list {
+    grid-template-columns: 300px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .content {
+    flex-wrap: wrap;
+  }
+
+  .greetings {
+    flex: 1 0 100%;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .story-telling {
+    width: 100%;
+  }
+
+  .pet-projects__list {
+    grid-template-columns: 300px 300px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .pet-projects__list {
+    grid-template-columns: 300px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .who {
+    font-size: 48px;
+  }
+
+  .profession {
+    font-size: 20px;
+  }
+
+  .organization {
+    font-size: 18px;
+  }
+
+  .pet-projects__caption {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .content {
+    width: auto;
+  }
+
+  .pet-projects__list {
+    grid-template-columns: 1fr;
+  }
+
+  .pet-project {
+    width: 100%;
+    min-width: 260px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .content {
+    min-width: 320px;
+  }
 }

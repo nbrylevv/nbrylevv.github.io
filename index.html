@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- That's pretty crazy: ON -->
+  <!-- That's pretty crazy -->
   <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
@@ -24,45 +24,57 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <!-- That's pretty crazy: OFF -->
 
   <link rel="stylesheet" href="styles.css">
-  <title>nbrylev Homepage</title>
-  <meta name="description" content="Work in progress still. Nothing new. Glad to see you here.">
-  <meta property="og:title" content="nbrylev Homepage">
-  <meta property="og:description" content="Work in progress still. Nothing new. Glad to see you here.">
+  <link rel="stylesheet" href="media.css">
+  <title>nbrylevv's Homepage</title>
+  <meta name="description" content="Just a homepage. Glad to see you here.">
+  <meta property="og:title" content="nbrylevv's Homepage">
+  <meta property="og:description" content="Just a homepage. Glad to see you here.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://nbrylev.github.io">
-  <meta property="og:image" content="http://nbrylev.github.io/main-character.jpg">
-  <meta property="og:image" content="http://nbrylev.github.io/main-photo.jpg">
+  <meta property="og:url" content="http://nbrylevv.github.io">
+  <meta property="og:image" content="http://nbrylevv.github.io/main-character.jpg">
+  <meta property="og:image" content="http://nbrylevv.github.io/main-photo.jpg">
 </head>
 <body>
-  <input type="checkbox"
-         class="fun-toggler">
   <div class="content">
-    <div class="work-in-progress">
-      <span class="work-in-progress__title">Work in<br>progress</span>
-      <span class="work-in-progress__spinner">N</span>
+    <div class="greetings">
+      <h1 class="who">Nikita Brylev</h1>
+      <h2 class="profession">Front-end Developer</h2>
+      <div class="organization">
+        @<a class="organization__link"
+            href="https://spacetab.io"
+            target="_blank">
+        spacetab.io
+      </a>
+      </div>
     </div>
-  </div>
-  <div class="projects">
-    <div class="projects__section">
-      <span class="projects__label">Repositories</span>
-      <a class="project"
-         href="./username-generator"
-         target="_blank">Username Generator</a>
-      <a class="project"
-	 href="./breaktify"
-	 target="_blank">Breaktify</a>
-    </div>
-    <div class="projects__section">
-      <span class="projects__label">Previous homepages</span>
-      <a class="project"
-         href="./homepages/xxxx2016"
-         target="_blank">xxxx2016</a>
-      <a class="project"
-         href="./homepages/xxxx2017"
-         target="_blank">xxxx2017</a>
+    <div class="story-telling">
+      <div class="pet-projects">
+        <span class="pet-projects__caption">Pet Projects</span>
+        <div class="pet-projects__list">
+          <a class="pet-project"
+             href="./breaktify"
+             target="_blank">
+            <img src="./assets/images/breaktify.png"
+                 alt="Breaktify example"
+                 class="pet-project__image">
+            <span class="pet-project__name">
+              Breaktify
+            </span>
+          </a>
+          <a class="pet-project"
+             href="./username-generator"
+             target="_blank">
+            <img src="./assets/images/username-generator.png"
+                 alt="Username Generator example"
+                 class="pet-project__image">
+            <span class="pet-project__name">
+              Username Generator
+            </span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </body>
