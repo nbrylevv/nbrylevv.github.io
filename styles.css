@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-  --greetings-background: #fbfbfb;
-  --organization-link-color: #137117;
-  --pet-border-radius: 6px;
+  --content-width: 1020px;
+  --content-padding: 10px;
+
+  --link-color: #1894b0;
+  --hash-color: inherit;
 }
 
 * {
@@ -12,16 +14,19 @@
 
 body {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  /*width: 100vw;*/
+  /*height: 100vh;*/
   margin: 0;
-  font-size: 16px;
-  line-height: 1.17;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #2e2e2e;
+  font-family: 'Roboto', sans-serif;
+  background: #ffffff;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   margin: 0;
+  font-weight: 500;
 }
 
 ul {
@@ -30,104 +35,180 @@ ul {
   list-style: none;
 }
 
-li {
+/* Here we go! */
 
+/* Common */
+
+.external-text-link {
+  color: var(--link-color);
 }
 
-.content {
-  position: relative;
+/* Any section */
+
+.section {
+  width: 100%;
+}
+
+.section__label {
+  font-size: 28px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 4px solid #009688;
+}
+
+.section__content {
+  width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--content-padding);
+}
+
+/* Header */
+
+.header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #efefef;
+}
+
+.header .section__content {
   display: flex;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.greetings {
-  flex: 0 0 500px;
-  height: 100%;
-  padding: 20px;
-  background: var(--greetings-background);
+.header__label {
+  position: relative;
+  padding-bottom: 6px;
+  font-size: 42px;
 }
 
-.who {
-  font-size: 58px;
+.header__sub-label {
+  position: absolute;
+  bottom: 0;
+  left: 3px;
+  font-size: 12px;
+  font-weight: normal;
+  color: var(--hash-color);
+}
+
+
+.header__profile-image {
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  cursor: help;
+}
+
+.header__profile-image:hover {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+
+/* Specific */
+
+.section.specific-info {
+  background: #fbfbfb;
+}
+
+.now-at-company {
+  font-size: 16px;
+}
+
+/* About */
+
+.spec-tags {
+  font-size: 16px;
+}
+
+.spec-tags__tag::before {
+  content: '# ';
+  color: var(--hash-color);
   font-weight: bold;
 }
 
-.profession {
-  font-size: 24px;
-  font-weight: normal;
+.spec-tags__tag:not(:last-of-type) {
+  margin-bottom: 5px;
 }
 
-.organization {
-  font-size: 20px;
-}
+/* Social Links */
 
-.organization__link {
-  color: var(--organization-link-color);
-  font-style: italic;
-  opacity: 0.8;
-  transition: color 0.125s linear;
-}
-
-.organization__link:hover {
-  color: #0d9413;
-}
-
-.story-telling {
-  height: 100%;
-  padding: 20px;
-  overflow-y: auto;
-}
-
-.pet-projects__caption {
-  display: block;
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
-.pet-projects__list {
+.social-links-list {
   display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-gap: 20px;
+  grid-gap: 10px;
+  grid-template-columns: repeat(24, 32px);
 }
 
-.pet-project {
-  position: relative;
-  display: flex;
-  width: 300px;
-  color: black;
-  text-decoration: none;
-  border: 1px solid #e2e2e2;
-  border-radius: var(--pet-border-radius);
-  transition: border-color 0.125s linear;
+.social-links-list__link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  opacity: 0.7;
 }
 
-.pet-project:hover {
-  border-color: #c7c7c7;
-}
-
-.pet-project__image {
-  height: 180px;
-  max-width: 100%;
-  object-fit: cover;
-  opacity: 0.8;
-  border-radius: var(--pet-border-radius);
-  transition: opacity 0.125s linear;
-}
-
-.pet-project:hover .pet-project__image {
+.social-links-list__link:hover {
   opacity: 1;
 }
 
-.pet-project__name {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 10px;
-  text-align: center;
-  border-radius: 0 0 var(--pet-border-radius) var(--pet-border-radius);
-  background: rgba(255, 255, 255, 0.9);
+.social-links-list__image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Pet Projects */
+
+.pet-projects-list {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 10px;
+}
+
+.pet-projects-list__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.pet-projects-list__image {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 5px;
+  object-fit: cover;
+  filter: grayscale(1);
+  border: 1px solid var(--link-color);
+  border-radius: 2px;
+}
+
+.pet-projects-list__link:hover .pet-projects-list__image {
+  filter: grayscale(0);
+}
+
+@media (max-width: 1020px) {
+  .section__content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .pet-projects-list {
+    grid-template-columns: 300px;
+  }
 }
